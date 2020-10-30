@@ -1,0 +1,30 @@
+.header{
+    background-color: #203C51;
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.love-pic{
+    animation:slideInFromRight 1.5s ease-in;
+}
+.header-text{
+    animation:slideInFromTop 1.5s ease-in;
+}
+
+
+@keyframes slideInFromRight{
+    0%{
+        transform:translateX(100%)
+    }
+    100%{
+        transform:translateX(0)
+    }
+}
+
+@keyframes slideInFromTop{
+    0%{
+        transform:translateY(-100%)
+    }
+    100%{
+        transform:translateX(0)
+    }
+}

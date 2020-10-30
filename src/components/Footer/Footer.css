@@ -1,0 +1,14 @@
+.footer{
+    background-color: #203C51;
+    clip-path:polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+.icons ul li {
+    list-style-type: none;
+}
+.icons li:hover{
+     background-color: #0394ad;
+     color: #fff;
+     border-radius: 15px;
+     padding: 5px;
+     width: 130px;
+}

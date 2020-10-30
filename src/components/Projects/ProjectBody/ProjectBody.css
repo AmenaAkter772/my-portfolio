@@ -1,0 +1,11 @@
+.text-style{
+    background-color: #203C51;
+}
+.shadow{
+    box-shadow: 5 5 10 solid black;
+    border-radius: 15px;
+}
+.slide-style{
+    background-color: #203C51;
+    color: white;
+}

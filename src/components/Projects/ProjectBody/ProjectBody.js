@@ -11,13 +11,48 @@ import Slider from 'react-slick';
 import data from '../CarouselItem/CarouselItem';
 
 const ProjectBody = () => {
-    const setting ={
+    const settings ={
         dots:true,
         slidesToShow:3,
         slidesToScroll:3,
         centerMode:true,
         autoplay:true,
-        autoPlaySpeed:3000
+        autoPlaySpeed:3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            }
+        ]
     }
     return (
         <>
@@ -27,7 +62,7 @@ const ProjectBody = () => {
                     <h2 className="mb-3">Full Stack Web Application</h2>
                 </div>
                 <Row className="text-center m-2 justify-content-center text-white">
-                    <Card className="m-2" style={{width: '18rem'}}>
+                    <Card className="m-2 card1" style={{width: '18rem'}}>
                         <Card.Img variant="top" src={creative}/>
                         <Card.Body className="text-style">
                             <Card.Title>Creative Agency</Card.Title>
@@ -51,7 +86,7 @@ const ProjectBody = () => {
                         </Card.Body>
                     </Card>
 
-                    <Card className="m-2" style={{width: '18rem'}}>
+                    <Card className="m-2 card2" style={{width: '18rem'}}>
                         <Card.Img variant="top" src={volunteer}/>
                         <Card.Body className="text-style">
                             <Card.Title>Volunteer Network</Card.Title>
@@ -75,7 +110,7 @@ const ProjectBody = () => {
                         </Card.Body>
                     </Card>
 
-                    <Card className="m-2 shadow" style={{width: '18rem'}}>
+                    <Card className="m-2 card3 shadow" style={{width: '18rem'}}>
                         <Card.Img variant="top" src={travel}/>
                         <Card.Body className="text-style">
                             <Card.Title>Travel Guru</Card.Title>
@@ -105,12 +140,12 @@ const ProjectBody = () => {
                  <div className="text-center mt-3 mb-5">
                      <h3>Some more responsive design</h3>
                  </div>
-                <Slider  {...setting}>
+                <Slider className= 'mt-3 py-3 container-fluid'  {...settings}>
                      {
                          data.map(item => (
-                             <Row className="d-flex container-fluid">
-                                 <Card className="w-100 text-center">
-                                     <img className="img-fluid" src={item.img} alt="" style={{height: '40vh'}}/>
+                             <Row className="container w-100 row">
+                                 <Card className="text-center">
+                                     <Card.Img className="img-fluid card-carousel" src={item.img} alt="" style={{height: '40vh'}}/>
                                      <h4 className="py-3 slide-style">{item.name}</h4>
                                  </Card>
                              </Row>

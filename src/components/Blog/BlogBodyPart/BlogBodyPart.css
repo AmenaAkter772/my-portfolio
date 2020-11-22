@@ -1,0 +1,9 @@
+.cardStyle{
+    background-color: #203C51;
+}
+.card1{
+    animation:slideInFromTop 1.5s ease-in
+}
+.card3{
+    animation: slideInFromTop 1.5s ease-in
+}
